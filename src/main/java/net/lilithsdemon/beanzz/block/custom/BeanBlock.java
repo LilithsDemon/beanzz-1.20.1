@@ -1,6 +1,7 @@
 package net.lilithsdemon.beanzz.block.custom;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.effect.InstantenousMobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -21,8 +22,6 @@ public class BeanBlock extends Block {
 
     @Override
     public void fallOn(Level pLevel, BlockState pState, BlockPos pPos, Entity pEntity, float pFallDistance) {
-        MobEffectInstance effect = new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400);
-        effect.applyEffect((LivingEntity) pEntity);
         if (pEntity.isSuppressingBounce()) {
             super.fallOn(pLevel, pState, pPos, pEntity, pFallDistance);
         } else {
@@ -38,10 +37,6 @@ public class BeanBlock extends Block {
         } else {
             this.bounceUp(pEntity);
         }
-
-        MobEffectInstance effect = new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400);
-        effect.applyEffect((LivingEntity) pEntity);
-
     }
 
     private void bounceUp(Entity pEntity) {
@@ -55,11 +50,13 @@ public class BeanBlock extends Block {
 
     @Override
     public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
-        MobEffectInstance effect = new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400);
-        effect.applyEffect((LivingEntity) pEntity);
         double $$4 = Math.abs(pEntity.getDeltaMovement().y);
         if ($$4 < 0.1 && !pEntity.isSteppingCarefully()) {
-            double $$5 = 0.4 + $$4 * 0.2;
+            double $$5 = 1.5 + $$4 * 0.2;
+            pEntity.setDeltaMovement(pEntity.getDeltaMovement().multiply($$5, (double)1.0F, $$5));
+        }else
+        {
+            double $$5 = 1.2 + $$4 * 0.2;
             pEntity.setDeltaMovement(pEntity.getDeltaMovement().multiply($$5, (double)1.0F, $$5));
         }
 

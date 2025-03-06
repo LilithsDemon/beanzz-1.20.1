@@ -7,7 +7,11 @@
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
+      "minecraft:windswept_hills": "2025-03-06 21:49:26 +0000",
+      "minecraft:savanna_plateau": "2025-03-06 21:50:09 +0000",
       "minecraft:river": "2025-03-05 05:10:07 +0000",
+      "minecraft:forest": "2025-03-06 14:40:43 +0000",
+      "minecraft:jungle": "2025-03-06 14:40:31 +0000",
       "minecraft:savanna": "2025-03-05 04:24:16 +0000"
     },
     "done": false
@@ -255,6 +259,42 @@
   "minecraft:recipes/misc/slime_ball": {
     "criteria": {
       "has_slime_block": "2025-03-05 22:41:57 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/spruce_planks": {
+    "criteria": {
+      "has_logs": "2025-03-06 08:26:15 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/charcoal": {
+    "criteria": {
+      "has_log": "2025-03-06 08:26:15 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_nugget_from_smelting": {
+    "criteria": {
+      "has_iron_hoe": "2025-03-06 13:48:19 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_nugget_from_blasting": {
+    "criteria": {
+      "has_iron_hoe": "2025-03-06 13:48:19 +0000"
+    },
+    "done": true
+  },
+  "beanzz:recipes/building_blocks/bean_block": {
+    "criteria": {
+      "has_bean": "2025-03-06 21:49:25 +0000"
+    },
+    "done": true
+  },
+  "beanzz:recipes/food/toast_slice_from_smelting_bread_slice": {
+    "criteria": {
+      "has_bread_slice": "2025-03-06 21:49:25 +0000"
     },
     "done": true
   },

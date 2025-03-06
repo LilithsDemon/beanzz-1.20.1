@@ -1,5 +1,6 @@
 package net.lilithsdemon.beanzz.block.custom;
 
+import net.lilithsdemon.beanzz.item.ModItems;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
@@ -20,11 +21,11 @@ public class BeanCropBlock extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return super.getBaseSeedId();
+        return ModItems.bean.get();
     }
 
     @Override
-    protected IntegerProperty getAgeProperty() {
+    public IntegerProperty getAgeProperty() {
         return AGE;
     }
 
