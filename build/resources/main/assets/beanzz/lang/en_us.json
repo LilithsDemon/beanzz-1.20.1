@@ -1,9 +1,11 @@
 {
-  "item.beanzz.bean": "A Bean",
+  "item.beanzz.bean": "Bean",
   "item.beanzz.beans_can": "Can of beans",
   "item.beanzz.bread_slice": "Bread Slice",
   "item.beanzz.toast_slice": "Baked (again) bread",
   "item.beanzz.beans_on_toast": "Beans on toast",
+
+  "block.beanzz.bean_block": "Bean Block",
 
   "creativetab.beanzz_tab": "Beanzz Tab"
 }

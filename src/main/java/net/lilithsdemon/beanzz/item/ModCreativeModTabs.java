@@ -1,6 +1,7 @@
 package net.lilithsdemon.beanzz.item;
 
 import net.lilithsdemon.beanzz.beanzz;
+import net.lilithsdemon.beanzz.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -23,6 +24,8 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.bread_slice.get());
                         output.accept(ModItems.toast_slice.get());
                         output.accept(ModItems.beans_on_toast.get());
+
+                        output.accept(ModBlocks.bean_block.get());
                     })
                     .build());
 

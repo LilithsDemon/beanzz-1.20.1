@@ -1,6 +1,7 @@
 package net.lilithsdemon.beanzz;
 
 import com.mojang.logging.LogUtils;
+import net.lilithsdemon.beanzz.block.ModBlocks;
 import net.lilithsdemon.beanzz.item.ModCreativeModTabs;
 import net.lilithsdemon.beanzz.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -33,6 +34,7 @@ public class beanzz
         ModCreativeModTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
