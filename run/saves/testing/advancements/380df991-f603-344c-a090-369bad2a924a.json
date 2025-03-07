@@ -298,5 +298,11 @@
     },
     "done": true
   },
+  "beanzz:recipes/food/beans_can": {
+    "criteria": {
+      "has_bean": "2025-03-06 23:53:38 +0000"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }

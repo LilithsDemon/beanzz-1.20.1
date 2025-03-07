@@ -2,6 +2,7 @@ package net.lilithsdemon.beanzz.datagen;
 
 import net.lilithsdemon.beanzz.beanzz;
 import net.lilithsdemon.beanzz.block.ModBlocks;
+import net.lilithsdemon.beanzz.block.custom.BeanBlock;
 import net.lilithsdemon.beanzz.block.custom.BeanCropBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -24,7 +25,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+
         blockWithItem(ModBlocks.bean_block);
+
+        /*
+        getVariantBuilder(ModBlocks.bean_block.get()).forAllStates(state -> {
+            int value = state.getValue(BeanBlock.SlipFactor);
+            return ConfiguredModel.builder()
+                    .modelFile(models().cubeAll("bean_block", modLoc("block/bean_block")))
+                    .build();
+        });
+
+         */
 
         makeBeanCrop((CropBlock) ModBlocks.bean_crop.get(), "bean_stage", "bean_stage");
     }

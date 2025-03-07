@@ -1,7 +1,6 @@
 package net.lilithsdemon.beanzz.datagen;
 
 import net.lilithsdemon.beanzz.beanzz;
-import net.lilithsdemon.beanzz.datagen.loot.ModBlockLootTables;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -33,5 +32,6 @@ public class DataGenerators {
                 new ModBlockTagGenerator(packOutput, lookupProvider, existingFileHelper));
         generator.addProvider(event.includeServer(), new ModItemTagGenerator(packOutput, lookupProvider, blockTagGenerator.contentsGetter(),existingFileHelper));
 
+        generator.addProvider(event.includeServer(), new ModGlobalLootModifiersProvider(packOutput));
     }
 }

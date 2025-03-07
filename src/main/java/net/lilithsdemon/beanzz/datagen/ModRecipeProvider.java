@@ -34,6 +34,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.bean.get()), has(ModItems.bean.get()))
                 .save(pWriter);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.beans_can.get())
+                .pattern("###")
+                .pattern("#*#")
+                .pattern("###")
+                .define('#', ModItems.bean.get())
+                .define('*', Items.IRON_INGOT)
+                .unlockedBy(getHasName(ModItems.bean.get()), has(ModItems.bean.get()))
+                .save(pWriter);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.bread_slice.get(), 3)
                 .requires(Items.BREAD)
                 .unlockedBy(getHasName(Items.BREAD), has(Items.BREAD))
